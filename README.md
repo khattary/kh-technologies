@@ -32,21 +32,12 @@ La mise à jour est visible après une à deux minutes.
 | `sitemap.xml`, `robots.txt` | Indications pour les moteurs de recherche |
 | `site.webmanifest`, `.nojekyll` | Fichiers techniques pour les navigateurs et GitHub Pages |
 
-## À compléter : les coordonnées
+## Modifier les coordonnées
 
-La rubrique Contact affiche « Coordonnées en cours de publication ». Dans `index.html`, chercher
-`coords-pending` et remplacer le paragraphe par ce bloc, en gardant seulement les lignes utiles :
-
-```html
-<ul class="coords">
-  <li><span>E-mail</span><a href="mailto:contact@exemple.mr">contact@exemple.mr</a></li>
-  <li><span>Téléphone</span><a href="tel:+22200000000">+222 00 00 00 00</a></li>
-  <li><span>Adresse</span><b>Adresse postale, Nouakchott</b></li>
-  <li><span>LinkedIn</span><a href="https://www.linkedin.com/company/exemple" rel="noopener">linkedin.com/company/exemple</a></li>
-</ul>
-```
-
-Les valeurs ci-dessus sont des exemples de forme, pas des coordonnées réelles.
+Les coordonnées de la rubrique Contact se trouvent dans `index.html`, dans la liste `<ul class="coords">` :
+une ligne `<li>` par coordonnée (e-mail, téléphone, WhatsApp, adresse). Le lien WhatsApp a la forme
+`https://wa.me/` suivi du numéro complet, sans `+` ni espace. Les mêmes e-mail et téléphone figurent aussi
+dans le bloc `application/ld+json` en tête de fichier, lu par les moteurs de recherche.
 
 ## Nom de domaine
 
