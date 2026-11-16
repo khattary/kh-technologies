@@ -1,9 +1,27 @@
 # Site institutionnel KH TECHNOLOGIES
 
+Site en ligne : https://khattary.github.io/kh-technologies/
+
 Site statique d'une seule page : tout est dans `index.html` (styles, scripts et pictogrammes intégrés).
 Aucune base de données, aucun serveur applicatif, aucune dépendance à installer.
 
-## Contenu du dossier
+## Hébergement
+
+Le site est hébergé gratuitement par GitHub Pages, depuis la branche `gh-pages` de ce dépôt.
+La branche `main` contient les mêmes fichiers et sert de référence.
+
+Pour publier une modification, envoyer les fichiers sur `gh-pages` (et sur `main`) :
+
+```bash
+git add -A
+git commit -m "Mise à jour du site"
+git push origin main
+git push origin main:gh-pages
+```
+
+La mise à jour est visible après une à deux minutes.
+
+## Contenu
 
 | Fichier | Rôle |
 |---|---|
@@ -11,12 +29,13 @@ Aucune base de données, aucun serveur applicatif, aucune dépendance à install
 | `404.html` | Page affichée pour une adresse inconnue |
 | `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` | Icônes du site |
 | `og-image.png` | Image affichée lors d'un partage (LinkedIn, WhatsApp) |
-| `site.webmanifest`, `robots.txt`, `.nojekyll` | Fichiers techniques pour les navigateurs, les moteurs de recherche et GitHub Pages |
+| `sitemap.xml`, `robots.txt` | Indications pour les moteurs de recherche |
+| `site.webmanifest`, `.nojekyll` | Fichiers techniques pour les navigateurs et GitHub Pages |
 
-## Avant la mise en ligne : les coordonnées
+## À compléter : les coordonnées
 
-La rubrique Contact affiche « Coordonnées en cours de publication ». Dans `index.html`, cherchez
-`coords-pending` et remplacez le paragraphe par ce bloc, en gardant seulement les lignes utiles :
+La rubrique Contact affiche « Coordonnées en cours de publication ». Dans `index.html`, chercher
+`coords-pending` et remplacer le paragraphe par ce bloc, en gardant seulement les lignes utiles :
 
 ```html
 <ul class="coords">
@@ -29,26 +48,14 @@ La rubrique Contact affiche « Coordonnées en cours de publication ». Dans `in
 
 Les valeurs ci-dessus sont des exemples de forme, pas des coordonnées réelles.
 
-## Mise en ligne gratuite
+## Nom de domaine
 
-### Option A — GitHub Pages
+L'hébergement est gratuit. Un nom de domaine propre (`.mr`, `.com`) est payant, à l'année, chez un bureau
+d'enregistrement. GitHub Pages accepte un domaine personnalisé et fournit le certificat HTTPS sans frais :
+dans le dépôt, Settings → Pages → Custom domain. Il faudra alors remplacer l'adresse
+`https://khattary.github.io/kh-technologies/` dans `index.html`, `sitemap.xml` et `robots.txt`.
 
-1. Créer un dépôt public sur github.com, par exemple `kh-technologies`.
-2. Y déposer tout le contenu de ce dossier (bouton « Add file → Upload files », ou `git push`).
-3. Dans le dépôt : Settings → Pages → Source « Deploy from a branch », branche `main`, dossier `/ (root)`, puis Save.
-4. Le site est en ligne après une à deux minutes à l'adresse `https://<identifiant>.github.io/kh-technologies/`.
+## Polices
 
-### Option B — Netlify ou Cloudflare Pages
-
-Créer un compte gratuit, choisir le déploiement par dépôt de fichiers (« Deploy manually » chez Netlify,
-« Upload assets » chez Cloudflare Pages) et y glisser ce dossier. L'adresse est fournie aussitôt.
-
-## Après la mise en ligne
-
-- **Image de partage.** Dans `index.html`, remplacer `content="og-image.png"` par l'adresse complète,
-  par exemple `https://<adresse-du-site>/og-image.png` : les réseaux sociaux exigent une adresse absolue.
-- **Nom de domaine.** L'hébergement est gratuit ; un nom de domaine propre (`.mr`, `.com`) est payant,
-  à l'année, chez un bureau d'enregistrement. Les trois hébergeurs ci-dessus acceptent un domaine personnalisé
-  et fournissent le certificat HTTPS sans frais.
-- **Polices.** Montserrat et Inter sont chargées depuis Google Fonts. Pour ne dépendre d'aucun service tiers,
-  elles peuvent être hébergées avec le site.
+Montserrat et Inter sont chargées depuis Google Fonts. Pour ne dépendre d'aucun service tiers,
+elles peuvent être hébergées avec le site.
