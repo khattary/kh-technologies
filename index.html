@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KH TECHNOLOGIES | Conseil IT et transformation numérique en Mauritanie</title>
+<meta name="description" content="KH TECHNOLOGIES : conseil IT, ingénierie logicielle et transformation numérique en Mauritanie, pour les administrations, les établissements publics, les entreprises et les organisations.">
+<meta name="theme-color" content="#0B1F3B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="KH TECHNOLOGIES">
+<meta property="og:title" content="KH TECHNOLOGIES — Technology. Innovation. Transformation.">
+<meta property="og:description" content="L’expertise internationale au service de la transformation numérique en Mauritanie.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512' role='img' aria-label='KH'%3E%3Ctitle%3EKH%3C/title%3E%3Crect width='512' height='512' rx='115.20' fill='%230B1F3B'/%3E%3Cpath fill='%23FFFFFF' d='M87.04 365.01 L87.04 146.99 L137.18 146.99 L137.18 221.96 L246.19 330.97 L246.19 146.99 L296.33 146.99 L296.33 233.44 L374.82 233.44 L374.82 146.99 L424.96 146.99 L424.96 365.01 L374.82 365.01 L374.82 278.56 L296.33 278.56 L296.33 365.01 L212.15 365.01 L137.18 290.04 L137.18 365.01 Z'/%3E%3Cpath fill='%230D7BFF' d='M212.15 146.99 L136.64 222.5 L170.68 256.54 L246.95 180.27 L246.95 146.99 Z'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Idée de mise en page : trois piliers (grilles en trois colonnes, filets verticaux), des ponts (filets horizontaux)
+   et un seul accent, le bras à 45° en bleu électrique. Thème unique, clair, aux couleurs de la marque. */
+:root {
+  color-scheme: light;
+  --navy: #0B1F3B; --navy-2: #11294B; --navy-deep: #081730;
+  --blue: #0D7BFF; --turq: #00C2B8; --mist: #E9EEF5; --paper: #FFFFFF;
+  --ink: #0B1F3B; --slate: #44546B; --line: #D5DCE6; --on-navy: #C6D3E4; --sky: #7DB8FF;
+  --display: "Montserrat", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --wrap: 1180px; --gut: clamp(20px, 4vw, 40px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+h1, h2, h3, p, ul, ol { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; letter-spacing: -.012em; text-wrap: balance; }
+a { color: inherit; }
+img, svg { max-width: 100%; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.on-navy :focus-visible { outline-color: #fff; }
+.wrap { width: 100%; max-width: calc(var(--wrap) + 2 * var(--gut)); margin: 0 auto; padding: 0 var(--gut); }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--navy); color: #fff; padding: 10px 16px; z-index: 50; }
+.skip:focus { left: 8px; }
+
+/* En-tête */
+.top { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.94); backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 28px; min-height: 72px; }
+.brand { display: flex; align-items: center; gap: 13px; text-decoration: none; margin-right: auto; }
+.logo-mark { height: 30px; width: auto; display: block; flex: none; }
+.wm { font-family: var(--display); font-size: 1.02rem; letter-spacing: .085em; font-weight: 500; color: var(--navy); white-space: nowrap; }
+.wm b { font-weight: 700; margin-right: .32em; }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a { font-size: .92rem; font-weight: 500; text-decoration: none; color: var(--navy); padding: 6px 0; position: relative; }
+.nav a.btn { color: #fff; padding: 10px 16px; }
+.nav a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.nav a:not(.btn):hover::after, .nav a[aria-current="true"]::after { transform: scaleX(1); }
+.burger { display: none; width: 44px; height: 44px; border: 1px solid var(--line); background: #fff; cursor: pointer; padding: 0; }
+.burger span { display: block; width: 20px; height: 2px; background: var(--navy); margin: 5px auto; transition: transform .2s ease, opacity .2s ease; }
+.burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Boutons */
+.btn { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 600; font-size: .95rem; letter-spacing: .01em; text-decoration: none; padding: 14px 22px; border: 1.5px solid var(--navy); background: var(--navy); color: #fff; transition: background .2s ease, color .2s ease, border-color .2s ease; }
+.btn::after { content: ""; width: 9px; height: 9px; border-top: 2px solid var(--blue); border-right: 2px solid var(--blue); transform: rotate(45deg); transition: transform .2s ease; flex: none; }
+.btn:hover::after { transform: translateX(4px) rotate(45deg); }
+.btn:hover { background: var(--navy-2); }
+.btn.sm { padding: 10px 16px; font-size: .88rem; }
+.btn.light { background: #fff; color: var(--navy); border-color: #fff; }
+.btn.light:hover { background: var(--mist); border-color: var(--mist); }
+.btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.45); }
+.btn.ghost:hover { border-color: #fff; background: rgba(255,255,255,.06); }
+
+/* Repères de section */
+.eyebrow { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-size: .74rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--slate); margin-bottom: 18px; }
+.eyebrow i { width: 9px; height: 14px; background: var(--blue); transform: skewX(-45deg); flex: none; }
+.eyebrow b { color: var(--navy); font-weight: 700; }
+.on-navy .eyebrow { color: var(--on-navy); } .on-navy .eyebrow b { color: #fff; }
+h2 { font-size: clamp(1.75rem, 1.1rem + 2.3vw, 2.7rem); max-width: 20ch; }
+.lead { font-size: 1.12rem; color: var(--slate); max-width: 62ch; margin-top: 18px; }
+.on-navy .lead { color: var(--on-navy); }
+section { padding: clamp(64px, 9vw, 116px) 0; scroll-margin-top: 72px; }
+.head { margin-bottom: clamp(36px, 5vw, 60px); }
+
+/* Accueil */
+.hero { background: var(--navy); color: #fff; padding: clamp(56px, 8vw, 104px) 0 0; overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.22fr) minmax(0, .78fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.hero h1 { font-size: clamp(2.05rem, 1.1rem + 3.1vw, 3.3rem); letter-spacing: -.02em; line-height: 1.1; max-width: 19ch; }
+.hero h1 em { font-style: normal; color: var(--sky); }
+.hero .sub { font-size: 1.14rem; color: var(--on-navy); max-width: 54ch; margin-top: 26px; }
+.cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+.blueprint { display: block; width: 100%; height: auto; overflow: visible; }
+.bp-grid path { stroke: rgba(255,255,255,.07); stroke-width: .35; fill: none; }
+.bp-p, .bp-leg, .bp-bar { fill: #fff; }
+.bp-arm { fill: var(--blue); }
+.bp-dims path { stroke: var(--sky); stroke-width: .45; fill: none; opacity: .75; }
+.bp-dims text { font-family: var(--body); font-size: 4.3px; font-weight: 500; fill: var(--sky); text-anchor: middle; }
+.bp-dims .bp-angle { stroke: var(--turq); stroke-dasharray: 1.6 1.2; opacity: 1; }
+.bp-dims .bp-deg { fill: var(--turq); text-anchor: start; }
+.sig { margin-top: clamp(48px, 7vw, 88px); border-top: 1px solid rgba(255,255,255,.14); }
+.sig .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px; padding-top: 22px; padding-bottom: 22px; font-size: .92rem; color: var(--on-navy); }
+.sig strong { font-family: var(--display); font-weight: 600; color: #fff; letter-spacing: .01em; }
+.sig strong span { color: var(--blue); }
+@media (prefers-reduced-motion: no-preference) {
+  .bp-p { transform-box: fill-box; transform-origin: 50% 100%; animation: rise .8s cubic-bezier(.2,.75,.2,1) both; }
+  .bp-p2 { animation-delay: .12s; } .bp-p3 { animation-delay: .24s; }
+  .bp-leg { animation: fade .5s ease .55s both; }
+  .bp-bar { transform-box: fill-box; transform-origin: 0 50%; animation: span .5s cubic-bezier(.2,.75,.2,1) .6s both; }
+  .bp-arm { animation: elan .7s cubic-bezier(.2,.9,.25,1.12) .95s both; }
+  .bp-dims { animation: fade .6s ease 1.4s both; }
+  @keyframes rise { from { transform: scaleY(0); } }
+  @keyframes span { from { transform: scaleX(0); } }
+  @keyframes fade { from { opacity: 0; } }
+  @keyframes elan { from { opacity: 0; transform: translate(-16px, 16px); } }
+}
+
+/* Preuves */
+.proof { padding: 0; border-bottom: 1px solid var(--line); }
+.proof ul { display: grid; grid-template-columns: repeat(4, 1fr); }
+.proof li { padding: 34px 28px 36px; border-left: 1px solid var(--line); }
+.proof li:first-child { border-left: 0; padding-left: 0; }
+.proof h2 { font-size: 1.02rem; margin-bottom: 8px; max-width: none; letter-spacing: 0; }
+.proof p { font-size: .94rem; color: var(--slate); line-height: 1.5; }
+
+/* Expertises */
+.expertises { background: var(--mist); }
+.poles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pole { background: #fff; padding: 30px 30px 34px; position: relative; display: flex; flex-direction: column; }
+.pole::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--blue); transform: scaleX(0); transform-origin: left; transition: transform .35s cubic-bezier(.2,.75,.2,1); }
+.pole:hover::before, .pole:focus-within::before { transform: scaleX(1); }
+.pole header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 26px; }
+.ico { width: 46px; height: 46px; display: block; }
+.idx { font-family: var(--display); font-weight: 600; font-size: .82rem; letter-spacing: .12em; color: var(--slate); font-variant-numeric: tabular-nums; }
+.pole h3 { font-size: 1.24rem; min-height: 2.3em; display: flex; align-items: flex-end; }
+.pole .tag { color: var(--slate); margin: 8px 0 20px; font-size: 1rem; min-height: 3.2em; }
+.pole ul { border-top: 1px solid var(--line); padding-top: 18px; display: grid; gap: 10px; }
+.pole li { position: relative; padding-left: 20px; font-size: .94rem; line-height: 1.45; }
+.pole li::before { content: ""; position: absolute; left: 2px; top: .42em; width: 6px; height: 9px; background: var(--blue); transform: skewX(-45deg); }
+
+/* Approche */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 2px solid var(--navy); }
+.steps li { padding: 30px 28px 6px 0; position: relative; }
+.steps li + li { padding-left: 28px; border-left: 1px solid var(--line); }
+.steps li::before { content: ""; position: absolute; left: 0; top: -8px; width: 14px; height: 14px; background: var(--navy); }
+.steps li + li::before { left: -7px; }
+.steps li:last-child::before { background: var(--blue); }
+.steps .n { font-family: var(--display); font-weight: 600; font-size: .82rem; letter-spacing: .12em; color: var(--slate); }
+.steps h3 { font-size: 1.32rem; margin: 10px 0 10px; }
+.steps p { color: var(--slate); font-size: .98rem; }
+
+/* Secteurs */
+.secteurs { background: var(--navy); color: #fff; }
+.sect { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,.16); }
+.sect li { padding: 30px 26px 34px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+.sect li:not(:nth-child(4n+1)) { padding-left: 26px; border-left: 1px solid rgba(255,255,255,.16); }
+.sect h3 { font-size: 1.08rem; margin-bottom: 10px; }
+.sect p { font-size: .93rem; line-height: 1.5; color: var(--on-navy); }
+
+/* Engagements */
+.eng .wrap { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.eng ol { counter-reset: e; border-top: 1px solid var(--line); }
+.eng ol li { counter-increment: e; display: grid; grid-template-columns: 44px 1fr; align-items: baseline; padding: 19px 0; border-bottom: 1px solid var(--line); font-size: 1.08rem; font-weight: 500; }
+.eng ol li::before { content: counter(e, decimal-leading-zero); font-family: var(--display); font-size: .8rem; font-weight: 600; letter-spacing: .1em; color: var(--blue); }
+.quote { margin-top: 34px; padding: 26px 0 0 26px; border-left: 3px solid var(--blue); }
+.quote p { font-family: var(--display); font-weight: 500; font-size: 1.22rem; line-height: 1.42; padding-bottom: 4px; }
+.quote span { display: block; font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--slate); font-weight: 600; margin-bottom: 12px; font-family: var(--display); }
+
+/* À propos */
+.apropos { background: var(--mist); }
+.apropos .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.prose p { max-width: 62ch; } .prose p + p { margin-top: 16px; }
+.prose p.intro { font-size: 1.18rem; line-height: 1.5; font-weight: 500; margin-top: 24px; }
+.panel { background: #fff; padding: 32px 32px 30px; border-top: 3px solid var(--navy); }
+.panel h3 { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--slate); margin-bottom: 16px; }
+.panel ul { display: grid; gap: 12px; }
+.panel li { position: relative; padding-left: 22px; font-weight: 500; }
+.panel li::before { content: ""; position: absolute; left: 2px; top: .46em; width: 6px; height: 9px; background: var(--blue); transform: skewX(-45deg); }
+.panel .langs { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); font-size: .96rem; color: var(--slate); }
+.panel .langs b { color: var(--navy); }
+
+/* Contact */
+.contact { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+.contact::before { content: ""; position: absolute; right: -6%; top: -30%; width: 22%; height: 190%; background: var(--navy-2); transform: skewX(-45deg); }
+.contact .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(32px, 6vw, 88px); align-items: end; }
+.contact h2 { max-width: 14ch; }
+.coords { border-top: 1px solid rgba(255,255,255,.2); }
+.coords li { display: grid; grid-template-columns: 116px 1fr; gap: 12px; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.2); align-items: baseline; }
+.coords span { font-family: var(--display); font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--sky); font-weight: 600; }
+.coords a, .coords b { font-weight: 500; font-size: 1.08rem; color: #fff; text-decoration-color: rgba(255,255,255,.4); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.coords a:hover { text-decoration-color: var(--blue); }
+.coords-pending { border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); padding: 22px 0; color: var(--on-navy); }
+.where { margin-top: 20px; font-size: .95rem; color: var(--on-navy); }
+
+/* Pied de page */
+footer { background: var(--navy-deep); color: var(--on-navy); padding: 46px 0 34px; font-size: .92rem; }
+footer .wrap { display: grid; grid-template-columns: 1fr auto; gap: 28px 40px; align-items: start; }
+footer .brand .wm { color: #fff; }
+footer .base { max-width: 46ch; margin-top: 16px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: flex-end; }
+footer nav a { text-decoration: none; color: #fff; } footer nav a:hover { text-decoration: underline; text-decoration-color: var(--blue); text-underline-offset: 4px; }
+.legal { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; border-top: 1px solid rgba(255,255,255,.14); padding-top: 22px; font-size: .84rem; }
+
+/* Adaptation aux écrans */
+@media (max-width: 1040px) {
+  .poles { grid-template-columns: repeat(2, 1fr); }
+  .sect { grid-template-columns: repeat(2, 1fr); }
+  .sect li:not(:nth-child(4n+1)) { padding-left: 0; border-left: 0; }
+  .sect li:nth-child(even) { padding-left: 26px; border-left: 1px solid rgba(255,255,255,.16); }
+  .steps { grid-template-columns: repeat(2, 1fr); row-gap: 26px; }
+  .steps li:nth-child(3) { padding-left: 0; border-left: 0; } .steps li:nth-child(3)::before { left: 0; }
+  .steps li:nth-child(n+3) { border-top: 2px solid var(--navy); }
+  .proof ul { grid-template-columns: repeat(2, 1fr); }
+  .proof li:nth-child(3) { border-left: 0; padding-left: 0; } .proof li:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 900px) {
+  .burger { display: block; }
+  .nav { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gut) 20px; display: none; }
+  .nav.open { display: flex; }
+  .nav a:not(.btn) { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 1rem; }
+  .nav a:not(.btn)::after { display: none; }
+  .nav .btn { margin-top: 16px; justify-content: space-between; }
+  .hero .wrap, .eng .wrap, .apropos .wrap, .contact .wrap { grid-template-columns: 1fr; }
+  .hero .art { max-width: 520px; }
+  .contact::before { display: none; }
+}
+@media (max-width: 620px) {
+  body { font-size: 1rem; }
+  .wm { font-size: .88rem; letter-spacing: .06em; } .logo-mark { height: 26px; }
+  .poles, .sect, .steps, .proof ul { grid-template-columns: 1fr; }
+  .sect li, .sect li:nth-child(even) { padding-left: 0; border-left: 0; }
+  .steps li, .steps li + li { padding-left: 0; border-left: 0; border-top: 2px solid var(--navy); } .steps { border-top: 0; row-gap: 22px; }
+  .steps li + li::before { left: 0; }
+  .proof li, .proof li:nth-child(3) { border-left: 0; padding: 24px 0; } .proof li + li { border-top: 1px solid var(--line); }
+  .pole { padding: 26px 22px 28px; } .pole .tag, .pole h3 { min-height: 0; }
+  .coords li { grid-template-columns: 1fr; gap: 4px; }
+  footer .wrap { grid-template-columns: 1fr; } footer nav { justify-content: flex-start; }
+  .cta .btn { width: 100%; justify-content: space-between; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KH TECHNOLOGIES","slogan":"Technology. Innovation. Transformation.","description":"Conseil IT, ingénierie logicielle et transformation numérique.","areaServed":{"@type":"Country","name":"Mauritanie"},"knowsLanguage":["fr","ar","en"]}</script>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil" aria-label="KH TECHNOLOGIES, retour en haut de page"><svg class="logo-mark" viewBox="0 0 151 100" aria-hidden="true" focusable="false"><path fill="var(--navy)" d="M0 100 L0 0 L21 0 L21 35.74 L71 85.74 L71 0 L92 0 L92 40.55 L130 40.55 L130 0 L151 0 L151 100 L130 100 L130 59.45 L92 59.45 L92 100 L56.74 100 L21 64.26 L21 100 Z"/><path fill="var(--blue)" d="M56.74 0 L23.83 32.92 L38.08 47.17 L67 18.26 L67 0 Z"/></svg><span class="wm"><b>KH</b>TECHNOLOGIES</span></a>
+    <button class="burger" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="menu" aria-label="Navigation principale">
+      <a href="#expertises">Expertises</a>
+      <a href="#approche">Approche</a>
+      <a href="#secteurs">Secteurs</a>
+      <a href="#engagements">Engagements</a>
+      <a href="#a-propos">À propos</a>
+      <a class="btn sm" href="#contact">Nous contacter</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+<div class="hero on-navy" id="accueil">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow"><i></i>Conseil IT · Ingénierie logicielle · Transformation numérique</p>
+      <h1>L’expertise internationale au service de la <em>transformation numérique</em> en Mauritanie.</h1>
+      <p class="sub">KH TECHNOLOGIES conçoit, réalise et modernise les systèmes d’information des administrations publiques, des établissements publics, des entreprises privées et des organisations.</p>
+      <div class="cta"><a class="btn light" href="#contact">Parler de votre projet</a><a class="btn ghost" href="#expertises">Voir nos expertises</a></div>
+    </div>
+    <div class="art"><svg class="blueprint" viewBox="-28 -18 207 146" role="img" aria-label="Le monogramme KH tracé sur sa grille de construction : trois piliers, un pont, un bras à 45 degrés.">
+  <g class="bp-grid"><path d="M-20 -14V114"/><path d="M-10 -14V114"/><path d="M0 -14V114"/><path d="M10 -14V114"/><path d="M20 -14V114"/><path d="M30 -14V114"/><path d="M40 -14V114"/><path d="M50 -14V114"/><path d="M60 -14V114"/><path d="M70 -14V114"/><path d="M80 -14V114"/><path d="M90 -14V114"/><path d="M100 -14V114"/><path d="M110 -14V114"/><path d="M120 -14V114"/><path d="M130 -14V114"/><path d="M140 -14V114"/><path d="M150 -14V114"/><path d="M160 -14V114"/><path d="M170 -14V114"/><path d="M-24 -10H175"/><path d="M-24 0H175"/><path d="M-24 10H175"/><path d="M-24 20H175"/><path d="M-24 30H175"/><path d="M-24 40H175"/><path d="M-24 50H175"/><path d="M-24 60H175"/><path d="M-24 70H175"/><path d="M-24 80H175"/><path d="M-24 90H175"/><path d="M-24 100H175"/><path d="M-24 110H175"/></g>
+  <path class="bp-p bp-p1" d="M0 100 L21 100 L21 0 L0 0 Z"/><path class="bp-p bp-p2" d="M71 100 L92 100 L92 0 L71 0 Z"/><path class="bp-p bp-p3" d="M130 100 L151 100 L151 0 L130 0 Z"/>
+  <path class="bp-leg" d="M71.6 86.34 L20.4 35.14 L20.4 63.66 L56.74 100 L71.6 100 Z"/><path class="bp-bar" d="M91.4 59.45 L130.6 59.45 L130.6 40.55 L91.4 40.55 Z"/>
+  <path class="bp-arm" d="M56.74 0 L23.83 32.92 L38.08 47.17 L67 18.26 L67 0 Z"/>
+  <g class="bp-dims"><path d="M0 112H21M0 110V114M21 110V114"/><text x="10.5" y="121">21</text><path d="M21 112H71M21 110V114M71 110V114"/><text x="46" y="121">50</text><path d="M71 112H92M71 110V114M92 110V114"/><text x="81.5" y="121">21</text><path d="M92 112H130M92 110V114M130 110V114"/><text x="111" y="121">38</text><path d="M130 112H151M130 110V114M151 110V114"/><text x="140.5" y="121">21</text>
+    <path d="M-10 0V100M-12 0H-8M-12 100H-8"/><text x="-14" y="52" text-anchor="end">100</text>
+    <path class="bp-angle" d="M21 50L51 20M21 50H43M35 50A14 14 0 0 0 30.90 40.10"/>
+    <text class="bp-deg" x="38" y="45.5">45°</text>
+  </g>
+</svg></div>
+  </div>
+  <div class="sig"><div class="wrap"><strong>Technology<span>.</span> Innovation<span>.</span> Transformation<span>.</span></strong><span>Trois piliers, un pont, un élan : notre signe, tracé sur sa grille.</span></div></div>
+</div>
+
+<section class="proof" aria-label="Ce qui nous distingue"><div class="wrap"><ul><li><h2>Standards internationaux</h2><p>Des méthodes éprouvées et des standards de qualité internationaux.</p></li><li><h2>Réalités locales</h2><p>Des solutions adaptées aux besoins, aux contraintes et au terrain mauritaniens.</p></li><li><h2>Trois langues</h2><p>Des interventions en français, en arabe et en anglais.</p></li><li><h2>De bout en bout</h2><p>Un accompagnement de proximité, de l’étude à la mise en production.</p></li></ul></div></section>
+
+<section class="expertises" id="expertises">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow"><i></i><b>01</b> Expertises</p><h2>Six pôles, une même exigence</h2>
+    <p class="lead">Du cadrage à l’exploitation, KH TECHNOLOGIES couvre toute la chaîne d’un projet numérique.</p></div>
+    <div class="poles"><article class="pole"><header><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M17 14 L7 24 L17 34"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M31 14 L41 24 L31 34"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--blue)" d="M27.5 10 L20.5 38"/></svg><span class="idx">01</span></header><h3>Développement logiciel</h3><p class="tag">Des applications sur mesure, conçues pour durer.</p><ul><li>Applications web et mobiles</li><li>Plateformes de démarches administratives et portails citoyens</li><li>Applications bilingues français / arabe</li><li>Solutions optimisées pour les environnements à connectivité limitée</li></ul></article><article class="pole"><header><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M6 41 H17 V32 H28 V23 H39 V14 H43"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--blue)" d="M8 26 L26 8"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--blue)" d="M15.5 8 H26 V18.5"/></svg><span class="idx">02</span></header><h3>Transformation digitale</h3><p class="tag">Cadrer, dématérialiser, automatiser.</p><ul><li>Termes de référence, cahiers des charges et études de faisabilité</li><li>Assistance à maîtrise d’ouvrage et maîtrise d’œuvre</li><li>Dématérialisation et gestion électronique des documents (GED)</li><li>Automatisation des procédures et des tâches répétitives</li></ul></article><article class="pole"><header><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M8 8 H29 V29 H8 Z"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M19 19 H40 V40 H19 Z"/><path fill="var(--blue)" d="M19 19 H29 V29 H19 Z"/></svg><span class="idx">03</span></header><h3>Intégration de solutions</h3><p class="tag">Faire dialoguer les systèmes.</p><ul><li>Systèmes d’information hospitaliers (SIH)</li><li>Intégration avec les organismes d’assurance maladie</li><li>Sélection et pilotage des solutions informatiques</li><li>Workflows de validation et gestion des dossiers</li></ul></article><article class="pole"><header><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M13 26 H36 L41 21 V18 L37 14 H33 L28 9 H20 L15 14 V16 H12 L8 20 V21 Z"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M8 32 H40 V41 H8 Z"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--blue)" d="M13 36.5 H19"/></svg><span class="idx">04</span></header><h3>Infrastructure et Cloud</h3><p class="tag">Des fondations fiables et évolutives.</p><ul><li>Évaluation des infrastructures et des applications</li><li>Optimisation des architectures et des ressources</li><li>Conception et administration de bases de données</li><li>Solutions hébergées localement</li></ul></article><article class="pole"><header><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M24 6 L40 11.5 V25 L24 42 L8 25 V11.5 Z"/><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--blue)" d="M16.5 23 L22 28.5 L32 17.5"/></svg><span class="idx">05</span></header><h3>Cybersécurité et conformité</h3><p class="tag">Auditer, protéger, gouverner.</p><ul><li>Audit technique, organisationnel et de sécurité</li><li>Diagnostic des risques et recommandations</li><li>Schémas directeurs des systèmes d’information</li><li>Archivage électronique sécurisé</li></ul></article><article class="pole"><header><svg class="ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path fill="none" stroke-width="2.6" stroke-linejoin="miter" stroke-miterlimit="8" stroke="var(--navy)" d="M21 12 L24.6 23.4 L36 27 L24.6 30.6 L21 42 L17.4 30.6 L6 27 L17.4 23.4 Z"/><path fill="var(--blue)" d="M37 5 L39.1 10.9 L45 13 L39.1 15.1 L37 21 L34.9 15.1 L29 13 L34.9 10.9 Z"/></svg><span class="idx">06</span></header><h3>Intelligence artificielle et innovation</h3><p class="tag">La donnée au service de la décision.</p><ul><li>Solutions d’intelligence artificielle, lorsqu’elles sont pertinentes</li><li>Exploitation et valorisation des données</li><li>Tableaux de bord et outils d’aide à la décision</li><li>Systèmes d’information géographique (SIG) et cartographie</li></ul></article></div>
+  </div>
+</section>
+
+<section id="approche">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow"><i></i><b>02</b> Approche</p><h2>De l’étude à la mise en production</h2>
+    <p class="lead">Quatre temps, toujours dans cet ordre. Chaque étape produit un livrable que vous validez avant de passer à la suivante.</p></div>
+    <ol class="steps"><li><span class="n">01</span><h3>Cadrer</h3><p>Études de faisabilité, termes de référence, cahiers des charges. Le besoin est posé par écrit avant la première ligne de code.</p></li><li><span class="n">02</span><h3>Concevoir</h3><p>Architecture, choix des solutions, maquettes. Chaque décision technique est expliquée et documentée.</p></li><li><span class="n">03</span><h3>Réaliser</h3><p>Développement, intégration, tests et mise en production, avec des méthodes agiles et des standards de qualité.</p></li><li><span class="n">04</span><h3>Transférer</h3><p>Formation technique et fonctionnelle, accompagnement au changement. Vos équipes restent autonomes.</p></li></ol>
+  </div>
+</section>
+
+<section class="secteurs on-navy" id="secteurs">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow"><i></i><b>03</b> Secteurs</p><h2>Nos marchés en Mauritanie</h2>
+    <p class="lead">Huit secteurs où un système d’information fiable change le service rendu.</p></div>
+    <ul class="sect"><li><h3>Administrations publiques</h3><p>Ministères, directions générales, collectivités territoriales, établissements publics.</p></li><li><h3>Santé</h3><p>Hôpitaux, centres de santé, cliniques, laboratoires, organismes d’assurance maladie.</p></li><li><h3>Éducation et formation</h3><p>Universités, écoles, instituts, centres de formation.</p></li><li><h3>Finances et assurances</h3><p>Banques, compagnies d’assurance, institutions financières, microfinance.</p></li><li><h3>Infrastructures et BTP</h3><p>Bureaux d’études, entreprises de construction, projets d’aménagement, gestion du patrimoine.</p></li><li><h3>Mines, énergie et environnement</h3><p>Sociétés minières, acteurs de l’énergie, projets environnementaux, organismes de suivi.</p></li><li><h3>ONG et développement</h3><p>Organisations internationales, programmes de coopération, projets financés par les partenaires techniques et financiers.</p></li><li><h3>Entreprises privées</h3><p>PME, grandes entreprises et structures qui modernisent leur système d’information.</p></li></ul>
+  </div>
+</section>
+
+<section class="eng" id="engagements">
+  <div class="wrap">
+    <div><p class="eyebrow"><i></i><b>04</b> Engagements</p><h2>Six engagements, sur chaque projet</h2>
+      <div class="quote"><span>Notre valeur ajoutée</span><p>Une expertise internationale, une connaissance des enjeux locaux et une approche pragmatique de la transformation numérique.</p></div>
+    </div>
+    <ol><li>Des solutions adaptées aux réalités mauritaniennes.</li><li>Une approche pragmatique, orientée résultats et maîtrise des coûts.</li><li>La sécurité, la fiabilité et la pérennité des solutions.</li><li>Le respect des bonnes pratiques et des standards de qualité.</li><li>Le transfert de compétences et l’autonomie des équipes locales.</li><li>Un accompagnement de proximité, de l’étude à la mise en production.</li></ol>
+  </div>
+</section>
+
+<section class="apropos" id="a-propos">
+  <div class="wrap">
+    <div class="prose"><p class="eyebrow"><i></i><b>05</b> À propos</p><h2>Qui sommes-nous</h2>
+      <p class="intro">KH TECHNOLOGIES est une société de conseil, d’ingénierie informatique et de transformation numérique basée en Mauritanie.</p>
+      <p>Elle s’appuie sur l’expérience internationale de son fondateur, acquise auprès de grands groupes et d’institutions en France : Thales, la Bibliothèque nationale de France, l’Assurance Maladie, la CNSA, la MGEN et le RSI.</p>
+      <p>Nous mettons ces méthodes au service du marché mauritanien, avec des solutions adaptées aux besoins, aux contraintes et aux réalités locales.</p>
+      <p>Notre ambition : contribuer à la modernisation des organisations, à l’amélioration des services publics et à la performance des entreprises, grâce à des solutions numériques fiables, sécurisées, évolutives et durables.</p>
+    </div>
+    <aside class="panel" aria-label="Nos valeurs"><h3>Nos valeurs</h3><ul><li>Excellence et professionnalisme</li><li>Innovation technologique</li><li>Confiance et fiabilité</li><li>Vision internationale</li><li>Accompagnement stratégique des organisations</li></ul>
+      <p class="langs"><b>Langues de travail :</b> français, arabe, anglais.</p></aside>
+  </div>
+</section>
+
+<section class="contact on-navy" id="contact">
+  <div class="wrap">
+    <div><p class="eyebrow"><i></i><b>06</b> Contact</p><h2>Parlons de votre projet</h2>
+      <p class="lead">Un besoin à cadrer, un appel d’offres à préparer, un système à moderniser : décrivez-nous votre contexte, nous vous répondons avec une première lecture.</p></div>
+    <div><!-- COORDONNÉES : remplacer le paragraphe ci-dessous par une liste <ul class="coords"> ; modèle dans README.md --><p class="coords-pending">Coordonnées en cours de publication.</p><p class="where">Mauritanie · Interventions en français, en arabe et en anglais</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="on-navy">
+  <div class="wrap">
+    <div><a class="brand" href="#accueil" aria-label="KH TECHNOLOGIES, retour en haut de page"><svg class="logo-mark" viewBox="0 0 151 100" aria-hidden="true" focusable="false"><path fill="#fff" d="M0 100 L0 0 L21 0 L21 35.74 L71 85.74 L71 0 L92 0 L92 40.55 L130 40.55 L130 0 L151 0 L151 100 L130 100 L130 59.45 L92 59.45 L92 100 L56.74 100 L21 64.26 L21 100 Z"/><path fill="var(--blue)" d="M56.74 0 L23.83 32.92 L38.08 47.17 L67 18.26 L67 0 Z"/></svg><span class="wm"><b>KH</b>TECHNOLOGIES</span></a>
+      <p class="base">Votre partenaire pour des projets numériques durables et performants.</p></div>
+    <nav aria-label="Navigation de pied de page"><a href="#expertises">Expertises</a><a href="#approche">Approche</a><a href="#secteurs">Secteurs</a><a href="#engagements">Engagements</a><a href="#a-propos">À propos</a><a href="#contact">Contact</a></nav>
+    <div class="legal"><span>© <span id="annee">2026</span> KH TECHNOLOGIES. Tous droits réservés.</span><span>Technology. Innovation. Transformation.</span></div>
+  </div>
+</footer>
+<script>
+(function () {
+  var burger = document.getElementById('menu-toggle'), nav = document.getElementById('menu');
+  burger.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
+  });
+  document.getElementById('annee').textContent = new Date().getFullYear();
+  var links = [].slice.call(nav.querySelectorAll('a[href^="#"]:not(.btn)'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        links.forEach(function (a) { a.setAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id ? 'true' : 'false'); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(function (a) { var s = document.querySelector(a.getAttribute('href')); if (s) io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
